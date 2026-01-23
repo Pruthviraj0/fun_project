@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:serif;
+    text-align: center;
+    background-color: #f0f8ff; /* Light Azure background */
+    color: #333;
+}
+
+h1, h2, h3, p {
+    margin: 10px 0;
+}
+
+/* Box Styling - Make each section cover the full screen */
+.box {
+    height: 100vh;  /* Set each section to cover the full viewport height */
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    padding: 0 20px;
+}
+
+/* Box 1 Styling */
+.box1 {
+    background-color: azure;
+    color: aquamarine;
+    font-size: 2rem;
+    flex-direction: column;
+}
+
+.box1 > h2 {
+    display: inline;
+    color: aquamarine;
+}
+
+.box1 > p {
+    display: inline;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+/* Box 2 Styling */
+.box2 {
+    background-color: #fff;
+    flex-direction: column;
+}
+
+.box2 > h1, .box2 > p {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.box2 > img {
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Box 3 Styling */
+.box3 {
+    background-color: #f9f9f9; /* Light gray background for contrast */
+}
+
+.box3 .parent {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 2rem;
+    width: 80%;
+    text-align: left;
+    margin: auto;
+}
+
+.box3 .parent > div {
+    padding: 20px;
+}
+
+.box3 .parent h3 {
+    color: aquamarine;
+    font-size: 1.5rem;
+}
+
+/* Box 4 Styling */
+.box4 {
+    background-color: #fff;
+    flex-direction: column;
+}
+
+.box4 > h1, .box4 > h2 {
+    color: aquamarine;
+    font-size: 3rem;
+}
+
+.box4 > button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: greenyellow;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Box 5 Footer */
+.box5 {
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+.box5 .footer {
+    text-align: center;
+}
+
+.box5 .footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.box5 .footer li {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .box3 .parent {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .box4 > button {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
